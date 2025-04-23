@@ -1,8 +1,8 @@
-from ..factory.PaypalFactory import PaypalFactory
-from ..factory.DebitCardFactory import DebitCardFactory
-from ..factory.paymentProcessor.PaymentProcessorFactory import PaymentProcessorFactory
-from ..factory.notification.NotificationFactory import NotificationFactory
 from ..factory.CreditCardFactory import CreditCardFactory
+from ..factory.DebitCardFactory import DebitCardFactory
+from ..factory.notification.NotificationFactory import NotificationFactory
+from ..factory.paymentProcessor.PaymentProcessorFactory import PaymentProcessorFactory
+from ..factory.PaypalFactory import PaypalFactory
 
 
 class Service:
@@ -20,7 +20,7 @@ class Service:
         # Enviar notificación del monto final
         notification = self.notification_factory.get_notification()
 
-        return notification.send(final_amount)
+        return notification.send_amount(final_amount)
 
     def configurationFactory(self, payment_type: str):
         if payment_type == "CREDIT_CARD":
