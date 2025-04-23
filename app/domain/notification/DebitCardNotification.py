@@ -1,6 +1,8 @@
+from typing import Dict
+
 from .Notification import Notification
 
 
 class DebitCardNotification(Notification):
-    def send_amount(self, amount: float) -> float:
-        return amount
+    def send_amount(self, amount: float) -> Dict[str, float]:
+        return {"amount": amount}
