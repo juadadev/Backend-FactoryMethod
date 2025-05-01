@@ -23,14 +23,14 @@ class Service:
         return notification.send_amount(final_amount)
 
     def configurationFactory(self, payment_type: str):
-        if payment_type == "CREDIT_CARD":
+        if payment_type == 'CREDIT_CARD':
             self.payment_processor_factory = CreditCardFactory()
             self.notification_factory = CreditCardFactory()
-        elif payment_type == "DEBIT_CARD":
+        elif payment_type == 'DEBIT_CARD':
             self.payment_processor_factory = DebitCardFactory()
             self.notification_factory = DebitCardFactory()
-        elif payment_type == "PAYPAL":
+        elif payment_type == 'PAYPAL':
             self.payment_processor_factory = PaypalFactory()
             self.notification_factory = PaypalFactory()
         else:
-            raise Exception("Método de pago no soportado")
+            raise Exception('Método de pago no soportado')

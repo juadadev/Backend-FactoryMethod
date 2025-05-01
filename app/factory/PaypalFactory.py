@@ -1,9 +1,9 @@
+from ..domain.notification.Notification import Notification
+from ..domain.notification.PaypalNotification import PaypalNotification
+from ..domain.paymentProcessor.PaymentProcessor import PaymentProcessor
+from ..domain.paymentProcessor.PaypalProcessor import PaypalProcessor
 from .notification.NotificationFactory import NotificationFactory
 from .paymentProcessor.PaymentProcessorFactory import PaymentProcessorFactory
-from ..domain.notification.Notification import Notification
-from ..domain.paymentProcessor.PaymentProcessor import PaymentProcessor
-from ..domain.notification.PaypalNotification import PaypalNotification
-from ..domain.paymentProcessor.PaypalProcessor import PaypalProcessor
 
 
 class PaypalFactory(NotificationFactory, PaymentProcessorFactory):
