@@ -1,2 +1,3 @@
 fastapi[standard]
 uvicorn[standard]
+ruff=0.11.7
